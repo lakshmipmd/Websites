@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <script type="text/javascript" src="C:/Users/ChinnuPaddu/Desktop/Lakshmi/Websites/charts/canvasjs-1.7.0/canvasjs.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		theme: "theme2",//theme1
+		title:{
+			text: "Basic Column Chart - CanvasJS"              
+		},
+		animationEnabled: false,   // change to true
+		data: [              
+		{
+			// Change type to "bar", "splineArea", "area", "spline", "pie",etc.
+			type: "bar",
+			//type: "column",
+			 name: "First Quarter",
+			dataPoints: [
+				{ label: "apple",  y: 10  },
+				{ label: "orange", y: 15  },
+				{ label: "banana", y: 25  },
+				{ label: "mango",  y: 30  },
+				{ label: "grape",  y: 28  }
+			]
+		},
+		{ //dataSeries - second quarter
+
+      type: "column",
+      name: "Second Quarter",                
+      dataPoints: [
+      { label: "banana", y: 23 },
+      { label: "orange", y: 33 },
+      { label: "apple", y: 48 },                                    
+      { label: "mango", y: 37 },
+      { label: "grape", y: 20 }
+      ]
+    }
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>
